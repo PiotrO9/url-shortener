@@ -16,15 +16,15 @@ export default {
             setTimeout(() => {
                 TypeWriter.textContent = "Testing"
                 document.documentElement.style.setProperty('--steps', "7")
-            }, 0)
+            }, 500)
             setTimeout(() => {
                 TypeWriter.textContent = "Buissnes"
                 document.documentElement.style.setProperty('--steps', "8")
-            }, 5000)
+            }, 5500)
             setTimeout(() => {
-                TypeWriter.textContent = "Fun"
-                document.documentElement.style.setProperty('--steps', "3")
-            }, 10000)
+                TypeWriter.textContent = "Funny"
+                document.documentElement.style.setProperty('--steps', "5")
+            }, 10500)
             setTimeout(textLoad, 15000)
         }
             textLoad()

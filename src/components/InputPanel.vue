@@ -1,6 +1,6 @@
 <template>
   <div id="InputPanel">
-    <input type="text">
+    <input type="text" placeholder="Paste long url and shorten it">
     <button>
         Shorten
     </button>

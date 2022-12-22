@@ -21,6 +21,7 @@ main {
     height: 100%;
     display: grid;
     grid-template-rows: 5fr 3fr;
+    background-color: $InputPanelBackgroundColor;
 }
 
 #MainTextSpace {
