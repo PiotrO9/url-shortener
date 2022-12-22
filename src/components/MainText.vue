@@ -1,7 +1,9 @@
 <template>
     <div id="MainText">
         <span>Short your link</span>
-        <span>For |</span>
+        <div id="TypeWriterText">
+            <span>For </span><span id="TypeWriter">Testing</span>
+        </div>
     </div>
 </template>
 
