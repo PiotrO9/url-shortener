@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500;700&display=swap');
 
+:root {
+    --steps: 7;
+}
+
 #MainText {
     display: flex;
     flex-direction: column; 
@@ -25,36 +29,19 @@ span {
     }
 
     &::before {
+        height: 100%;
+        width: 100%;
         background-color: white;
-        animation: typewriter 3s steps(7) forwards,
-        typewriterback 3s steps(7) forwards;
-        animation-delay: 0s, 4s;
-    }
-
-    &::after {
-        width: 0.125em;
-        background-color: black;
-        animation: typewriter 3s steps(7) forwards,
-        typewriterback 3s steps(7) forwards,
-        blink 750ms steps(7) infinite;
-        animation-delay: 0s, 4s, 0s;
+        border-left: 0.125em solid red;
+        animation: typewriter 5s steps(var(--steps)) infinite;
     }
 }
 
 @keyframes typewriter {
-    to {
+    40%, 60% {
         left: 100%;
     }
-}
-
-@keyframes typewriterback {
-    to {
+    100% {
         left: 0%;
-    }
-}
-
-@keyframes blink {
-    to {
-        background: transparent;
     }
 }
