@@ -1,3 +1,14 @@
 $InputPanelBackgroundColor: rgb(18, 18, 18);
 $ButtonBackGroundColor: rgb(10, 191, 80);
 $borderRadius: 10px;
+
+@mixin HeightAndWidth($value) {
+    height: $value;
+    width: $value;
+}
+
+@mixin FlexCener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

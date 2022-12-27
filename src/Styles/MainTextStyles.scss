@@ -31,8 +31,7 @@ span {
     }
 
     &::before {
-        height: 100%;
-        width: 100%;
+        @include HeightAndWidth(100%);
         background-color: $InputPanelBackgroundColor;
         border-left: 0.125em solid white;
         animation: typewriter 5s steps(var(--steps)) infinite;

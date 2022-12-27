@@ -11,6 +11,7 @@
 
 span {
   font-size: 72px;
+  color: white;
 }
 
 #TypeWriter {
@@ -28,8 +29,8 @@ span {
 #TypeWriter::before {
   height: 100%;
   width: 100%;
-  background-color: white;
-  border-left: 0.125em solid red;
+  background-color: rgb(18, 18, 18);
+  border-left: 0.125em solid white;
   -webkit-animation: typewriter 5s steps(var(--steps)) infinite;
           animation: typewriter 5s steps(var(--steps)) infinite;
 }

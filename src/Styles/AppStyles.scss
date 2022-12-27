@@ -6,32 +6,16 @@
     box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
-#app {
-    width: 100%;
-    height: 100%;
+html, body, #app, main {
+    @include HeightAndWidth(100%);
 }
 
 main {
-    width: 100%;
-    height: 100%;
     display: grid;
     grid-template-rows: 5fr 3fr;
     background-color: $InputPanelBackgroundColor;
 }
 
-#MainTextSpace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#InputPanelSpace {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#MainTextSpace, #InputPanelSpace {
+    @include FlexCener;
 }
