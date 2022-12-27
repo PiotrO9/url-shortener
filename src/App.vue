@@ -16,12 +16,28 @@
 <script>
 import MainText from './components/MainText.vue'
 import InputPanel from './components/InputPanel.vue'
+import UrlShortenerApiKey from './utils/apikeys/ShortUrlApi.js'
+
 
 export default {
   name: 'App',
   components: {
     MainText,
     InputPanel
+  },
+  mounted() {
+
+    let tst = UrlShortenerApiKey;
+
+  //   fetch('https://api-ssl.bitly.com/v4/shorten', {
+  //     method: 'POST',
+  //     headers: {
+  //         'Authorization': `Bearer ${UrlShortenerApiKey}`,
+  //         'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({ "long_url": "https://www.youtube.com/watch?v=UtKLFZE9__4", "domain": "bit.ly" })
+  // }).then((res) => res.json())
+  // .then((test) => console.log(test.link));
   }
 }
 </script>
