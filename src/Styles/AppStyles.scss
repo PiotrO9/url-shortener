@@ -8,6 +8,7 @@
 
 html, body, #app, main {
     @include HeightAndWidth(100%);
+    overflow: hidden;
 }
 
 main {

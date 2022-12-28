@@ -21,7 +21,6 @@ export default {
   },
   methods: {
     SubmitUrl() {
-      console.log(this.InputValue)
       if(!RegexChecker(this.InputValue)) {
         const Input = document.querySelector("input")
         document.getElementById("InputPanel").classList.add("wrong-url")
@@ -34,6 +33,11 @@ export default {
           Input.setAttribute("placeholder", "Paste long url and shorten it"),
           document.getElementById("InputPanel").classList.remove("wrong-url")
         }, 2200)
+      }
+      else
+      {
+        this.$emit('shorted')
+        console.log("shorted")
       }
     }
   }

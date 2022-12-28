@@ -1,6 +1,8 @@
 <template>
   <main>
-    <NewUrl />
+    <transition name="new-url" appear>
+      <NewUrl v-if="NewUrlVisibility" @close="CloseNewUrl"/>
+    </transition>
     <div id="MainTextSpace">
       <transition name="maintext" appear>
         <MainText />
@@ -8,7 +10,7 @@
     </div>
     <div id="InputPanelSpace">
       <transition name="input-panel" appear>
-        <InputPanel />
+        <InputPanel @shorted="DisplayNewUrl"/>
       </transition>
     </div>
   </main>
@@ -20,16 +22,27 @@ import InputPanel from './components/InputPanel.vue'
 import NewUrl from './components/NewUrl.vue'
 import UrlShortenerApiKey from './utils/apikeys/ShortUrlApi.js'
 
-
 export default {
   name: 'App',
+  data(){
+    return {
+      NewUrlVisibility: false
+    }
+  },
   components: {
     MainText,
     InputPanel,
     NewUrl
   },
+  methods: {
+    DisplayNewUrl() {
+      this.NewUrlVisibility = true
+    },
+    CloseNewUrl() {
+      this.NewUrlVisibility = false
+    }
+  },
   mounted() {
-
     let tst = UrlShortenerApiKey;
 
   //   fetch('https://api-ssl.bitly.com/v4/shorten', {
@@ -54,6 +67,14 @@ export default {
 
 .maintext-enter-active {
   animation: maintextAppear 7s forwards;
+}
+
+.new-url-enter-active {
+  animation: newUrlAppear 3s forwards;
+}
+
+.new-url-leave-active {
+  animation: newUrlDisappear 2s forwards;
 }
 
 @keyframes inputPanelAppear {
@@ -82,6 +103,24 @@ export default {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes newUrlAppear {
+  0% {
+    transform: translate3d(100vw, -15vh, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes newUrlDisappear {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100vw, -15vh, 0);
   }
 }
 </style>
