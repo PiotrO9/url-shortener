@@ -1,5 +1,6 @@
 <template>
   <main>
+    <NewUrl />
     <div id="MainTextSpace">
       <transition name="maintext" appear>
         <MainText />
@@ -16,6 +17,7 @@
 <script>
 import MainText from './components/MainText.vue'
 import InputPanel from './components/InputPanel.vue'
+import NewUrl from './components/NewUrl.vue'
 import UrlShortenerApiKey from './utils/apikeys/ShortUrlApi.js'
 
 
@@ -23,7 +25,8 @@ export default {
   name: 'App',
   components: {
     MainText,
-    InputPanel
+    InputPanel,
+    NewUrl
   },
   mounted() {
 

@@ -13,6 +13,7 @@ html, body, #app, main {
 main {
     display: grid;
     grid-template-rows: 5fr 3fr;
+    position: relative;
     background-color: $InputPanelBackgroundColor;
 }
 

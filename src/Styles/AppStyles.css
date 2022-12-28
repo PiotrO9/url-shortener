@@ -12,6 +12,7 @@ html, body, #app, main {
 main {
   display: grid;
   grid-template-rows: 5fr 3fr;
+  position: relative;
   background-color: rgb(18, 18, 18);
 }
 

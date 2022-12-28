@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+#NewUrl {
+    height: 8vh;
+    width: 50vw;
+    position: absolute;
+    top: 50vh;
+    left: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: $borderRadius;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    border: 3px solid grey;
+    font-family: "Sora";
+    font-weight: 300;
+
+    span {
+        width: 90%;
+        font-size: 40px;
+        padding-left: 10px;
+    }
+
+    #CopyIcon {
+        width: 10%;
+
+        svg {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}

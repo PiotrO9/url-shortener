@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
+#NewUrl {
+  height: 8vh;
+  width: 50vw;
+  position: absolute;
+  top: 50vh;
+  left: 25vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(18, 18, 18);
+  color: white;
+  border: 3px solid grey;
+  font-family: "Sora";
+  font-weight: 300;
+}
+#NewUrl span {
+  width: 90%;
+  font-size: 40px;
+  padding-left: 10px;
+}
+#NewUrl #CopyIcon {
+  width: 10%;
+}
+#NewUrl #CopyIcon svg {
+  width: 35px;
+  height: 35px;
+}/*# sourceMappingURL=NewUrlStyles.css.map */
