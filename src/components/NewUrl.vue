@@ -1,8 +1,12 @@
 <template>
   <div id="NewUrl">
-    <span>Test</span>
+    <span>Test text longer than usually</span>
     <div id="CopyIcon">
-        <fa icon="clipboard"/>
+        <fa id="clipboard" icon="clipboard"/>
+        <fa id="close" icon="close"/>
+        <div id="CopiedAlert">
+            <span>Copied</span>
+        </div>
     </div>
   </div>
 </template>

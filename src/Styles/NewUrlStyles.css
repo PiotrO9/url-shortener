@@ -17,13 +17,36 @@
 }
 #NewUrl span {
   width: 90%;
-  font-size: 40px;
+  font-size: 36px;
   padding-left: 10px;
 }
 #NewUrl #CopyIcon {
   width: 10%;
+  position: relative;
 }
-#NewUrl #CopyIcon svg {
-  width: 35px;
+#NewUrl #CopyIcon #clipboard {
+  width: 30px;
   height: 35px;
+  cursor: pointer;
+}
+#NewUrl #CopyIcon #close {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  height: 20px;
+  cursor: pointer;
+}
+#NewUrl #CopyIcon #CopiedAlert {
+  position: absolute;
+  top: -60px;
+  left: -30px;
+  height: 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 2px;
+}
+#NewUrl #CopyIcon #CopiedAlert span {
+  font-size: 16px;
+  padding-right: 10px;
 }/*# sourceMappingURL=NewUrlStyles.css.map */
