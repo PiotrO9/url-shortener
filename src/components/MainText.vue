@@ -8,26 +8,27 @@
 </template>
 
 <script>
+import Typewriter from 'typewriter-effect/dist/core'
 export default {
     mounted() {
-        const TypeWriter = document.getElementById("TypeWriter");
+        const TypeWriterText = document.getElementById("TypeWriter")
 
-        const textLoad = () => {
-            setTimeout(() => {
-                TypeWriter.textContent = "Testing"
-                document.documentElement.style.setProperty('--steps', "7")
-            }, 500)
-            setTimeout(() => {
-                TypeWriter.textContent = "Buissnes"
-                document.documentElement.style.setProperty('--steps', "8")
-            }, 5500)
-            setTimeout(() => {
-                TypeWriter.textContent = "Funny"
-                document.documentElement.style.setProperty('--steps', "5")
-            }, 10500)
-            setTimeout(textLoad, 15000)
-        }
-            textLoad()
+        var typeWriter = new Typewriter(TypeWriterText, {
+            loop: true,
+            autostart: true,
+        })
+
+        typeWriter.pauseFor(5500)
+            .typeString("Testing")
+            .pauseFor(4000)
+            .deleteAll()
+            .typeString("Buissnes")
+            .pauseFor(4000)
+            .deleteAll()
+            .typeString("Fun")
+            .pauseFor(4000)
+            .deleteAll()
+            .start()
     }
 }
 
