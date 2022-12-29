@@ -34,5 +34,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../Styles/MainTextStyles.scss";
+@import "../assets/Styles/MainTextStyles.scss";
 </style>

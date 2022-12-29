@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../Styles/NewUrlStyles.scss";
+@import "../assets/Styles/NewUrlStyles.scss";
 
 .new-url-leave-active {
 

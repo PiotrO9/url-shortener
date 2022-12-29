@@ -45,27 +45,12 @@ export default {
     CloseNewUrl() {
       this.NewUrlVisibility = false
     }
-  },
-  mounted() {
-    let tst = UrlShortenerApiKey;
-
-    // FetchApi().then((res) => console.log(res[0]))
-
-  //   fetch('https://api-ssl.bitly.com/v4/shorten', {
-  //     method: 'POST',
-  //     headers: {
-  //         'Authorization': `Bearer ${UrlShortenerApiKey}`,
-  //         'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({ "long_url": "https://www.youtube.com/watch?v=UtKLFZE9__4", "domain": "bit.ly" })
-  // }).then((res) => res.json())
-  // .then((test) => console.log(test.link));
   }
 }
 </script>
 
 <style lang="scss">
-@import "./Styles/AppStyles.scss";
+@import "./assets/Styles/AppStyles.scss";
 
 .input-panel-enter-active {
   animation: inputPanelAppear 5s forwards;

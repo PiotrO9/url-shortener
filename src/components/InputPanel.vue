@@ -37,7 +37,6 @@ export default {
       else
       {
         this.$emit('shorted', this.InputValue)
-        console.log("shorted")
       }
     }
   }
@@ -45,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../Styles/InputPanelStyles.scss';
+@import '../assets/Styles/InputPanelStyles.scss';
 
 .wrong-url {
   animation: wrongUrlAnimation 1s forwards;
