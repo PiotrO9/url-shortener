@@ -1,7 +1,7 @@
 <template>
   <main>
     <transition name="new-url" appear>
-      <NewUrl v-if="NewUrlVisibility" @close="CloseNewUrl"/>
+      <NewUrl v-if="NewUrlVisibility" @close="CloseNewUrl" :shortLink="ShortLink"/>
     </transition>
     <div id="MainTextSpace">
       <transition name="maintext" appear>
@@ -21,12 +21,14 @@ import MainText from './components/MainText.vue'
 import InputPanel from './components/InputPanel.vue'
 import NewUrl from './components/NewUrl.vue'
 import UrlShortenerApiKey from './utils/apikeys/ShortUrlApi.js'
+import FetchApi from './utils/FetchApi.js'
 
 export default {
   name: 'App',
   data(){
     return {
-      NewUrlVisibility: false
+      NewUrlVisibility: false,
+      ShortLink: ""
     }
   },
   components: {
@@ -35,8 +37,10 @@ export default {
     NewUrl
   },
   methods: {
-    DisplayNewUrl() {
-      this.NewUrlVisibility = true
+    DisplayNewUrl(LongLink) {
+      FetchApi(LongLink)
+        .then((res) => this.ShortLink = res)
+        .then(this.NewUrlVisibility = true)
     },
     CloseNewUrl() {
       this.NewUrlVisibility = false
@@ -44,6 +48,8 @@ export default {
   },
   mounted() {
     let tst = UrlShortenerApiKey;
+
+    // FetchApi().then((res) => console.log(res[0]))
 
   //   fetch('https://api-ssl.bitly.com/v4/shorten', {
   //     method: 'POST',

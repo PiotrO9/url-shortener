@@ -1,6 +1,6 @@
 <template>
   <div id="NewUrl">
-    <span id="TextToCopy">Test text longer than usually</span>
+    <span id="TextToCopy">{{ shortLink }}</span>
     <div id="CopyIcon">
         <fa @click="CopyTextToClipboard" id="clipboard" icon="clipboard"/>
         <transition name="close">
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+    props: ['shortLink'],
     data() {
         return{
             copiedVisibility: false,

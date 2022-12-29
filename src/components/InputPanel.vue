@@ -36,7 +36,7 @@ export default {
       }
       else
       {
-        this.$emit('shorted')
+        this.$emit('shorted', this.InputValue)
         console.log("shorted")
       }
     }
