@@ -3,9 +3,11 @@
 #NewUrl {
     height: 8vh;
     width: 50vw;
+    min-width: 250px;
+    min-height: 70px;
     position: absolute;
     top: 50vh;
-    left: 25vw;
+    left: 25%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,20 +18,51 @@
     font-family: "Sora";
     font-weight: 300;
 
+    @media (max-width: 475px) {
+        left: 19%;
+        right: 19%;
+    }
+
     span {
         width: 90%;
         font-size: 36px;
         padding-left: 10px;
+
+        @media (max-width: $SmallScreenWidthResolution) {
+            font-size: 26px;
+        }
+
+        @media (max-width: $MediumWidthResolution) {
+            font-size: 20px;
+        }
+    
+        @media (max-width: $SmallWidthResolution) {
+            font-size: 15px;
+        }
     }
 
     #CopyIcon {
         width: 10%;
         position: relative;
 
+        @media (max-width: $SmallWidthResolution) {
+            margin-right: 10px;
+        }
+
         #clipboard {
             width: 30px;
             height: 35px;
             cursor: pointer;
+
+            @media (max-width: $MediumWidthResolution) {
+                height: 20px;
+                padding-right: 10px;
+            }
+        
+            @media (max-width: $SmallWidthResolution) {
+                height: 18px;
+                padding-right: 10px;
+            }
         }
 
         #close {
@@ -38,6 +71,17 @@
             right: 5px;
             height: 20px;
             cursor: pointer;
+
+            @media (max-width: $MediumWidthResolution) {
+                height: 16px;
+                top: -16px
+            }
+        
+            @media (max-width: $SmallWidthResolution) {
+                font-size: 12px;
+                right: -5px;
+                top: -18px;
+            }
         }
 
         #CopiedAlert {
@@ -50,9 +94,27 @@
             text-align: center;
             padding-top: 2px;            
 
+            @media (max-width: $MediumWidthResolution) {
+                left: -33px
+            }
+        
+            @media (max-width: $SmallWidthResolution) {
+                left: -22px;
+                font-size: 11px;
+                padding-top: 6px;
+            }
+
             span {
                 font-size: 16px;
                 padding-right: 10px;
+
+                @media (max-width: $MediumWidthResolution) {
+                    font-size: 14px;
+                }
+            
+                @media (max-width: $SmallWidthResolution) {
+                    font-size: 11px;
+                }
             }
         }
     }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;500;700&display=swap");
 :root {
   --steps: 7;
@@ -13,26 +14,20 @@ span {
   font-size: 72px;
   color: white;
 }
+@media (max-width: 900px) {
+  span {
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
+  span {
+    font-size: 38px;
+  }
+}
 
 #TypeWriter {
   position: relative;
   font-family: "Source Code Pro";
-}
-#TypeWriter::before, #TypeWriter::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-#TypeWriter::before {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(18, 18, 18);
-  border-left: 0.125em solid white;
-  -webkit-animation: typewriter 5s steps(var(--steps)) infinite;
-          animation: typewriter 5s steps(var(--steps)) infinite;
 }
 
 @-webkit-keyframes typewriter {

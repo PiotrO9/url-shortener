@@ -18,11 +18,11 @@ export default {
             autostart: true,
         })
 
-        typeWriter.pauseFor(5500)
+        typeWriter.pauseFor(2000)
             .typeString("Testing")
             .pauseFor(4000)
             .deleteAll()
-            .typeString("Buissnes")
+            .typeString("Business")
             .pauseFor(4000)
             .deleteAll()
             .typeString("Fun")

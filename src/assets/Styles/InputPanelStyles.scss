@@ -4,6 +4,7 @@
 #InputPanel {
     width: 80%;
     height: 5vh;
+    min-height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,6 +25,15 @@ input {
     background-color: $InputPanelBackgroundColor;
     color: white;
     font-family: "Sora";
+
+    @media (max-width: $MediumWidthResolution) {
+        font-size: 20px;
+        padding-left: 5px;
+    }
+
+    @media (max-width: $MediumWidthResolution) {
+        font-size: 14px;
+    }
 }
 
 button {
@@ -35,4 +45,12 @@ button {
     color: white;
     font-family: "Sora";
     cursor: pointer;
+
+    @media (max-width: $MediumWidthResolution) {
+        width: 20%;
+    }
+
+    @media (max-width: $SmallWidthResolution) {
+        font-size: 11px;
+    }
 }

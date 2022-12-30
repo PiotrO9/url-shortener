@@ -2,9 +2,11 @@
 #NewUrl {
   height: 8vh;
   width: 50vw;
+  min-width: 250px;
+  min-height: 70px;
   position: absolute;
   top: 50vh;
-  left: 25vw;
+  left: 25%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,19 +17,57 @@
   font-family: "Sora";
   font-weight: 300;
 }
+@media (max-width: 475px) {
+  #NewUrl {
+    left: 19%;
+    right: 19%;
+  }
+}
 #NewUrl span {
   width: 90%;
   font-size: 36px;
   padding-left: 10px;
 }
+@media (max-width: 1000px) {
+  #NewUrl span {
+    font-size: 26px;
+  }
+}
+@media (max-width: 800px) {
+  #NewUrl span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  #NewUrl span {
+    font-size: 15px;
+  }
+}
 #NewUrl #CopyIcon {
   width: 10%;
   position: relative;
+}
+@media (max-width: 600px) {
+  #NewUrl #CopyIcon {
+    margin-right: 10px;
+  }
 }
 #NewUrl #CopyIcon #clipboard {
   width: 30px;
   height: 35px;
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  #NewUrl #CopyIcon #clipboard {
+    height: 20px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 600px) {
+  #NewUrl #CopyIcon #clipboard {
+    height: 18px;
+    padding-right: 10px;
+  }
 }
 #NewUrl #CopyIcon #close {
   position: absolute;
@@ -35,6 +75,19 @@
   right: 5px;
   height: 20px;
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  #NewUrl #CopyIcon #close {
+    height: 16px;
+    top: -16px;
+  }
+}
+@media (max-width: 600px) {
+  #NewUrl #CopyIcon #close {
+    font-size: 12px;
+    right: -5px;
+    top: -18px;
+  }
 }
 #NewUrl #CopyIcon #CopiedAlert {
   position: absolute;
@@ -46,7 +99,29 @@
   text-align: center;
   padding-top: 2px;
 }
+@media (max-width: 800px) {
+  #NewUrl #CopyIcon #CopiedAlert {
+    left: -33px;
+  }
+}
+@media (max-width: 600px) {
+  #NewUrl #CopyIcon #CopiedAlert {
+    left: -22px;
+    font-size: 11px;
+    padding-top: 6px;
+  }
+}
 #NewUrl #CopyIcon #CopiedAlert span {
   font-size: 16px;
   padding-right: 10px;
+}
+@media (max-width: 800px) {
+  #NewUrl #CopyIcon #CopiedAlert span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  #NewUrl #CopyIcon #CopiedAlert span {
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=NewUrlStyles.css.map */

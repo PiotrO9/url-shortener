@@ -3,6 +3,7 @@
 #InputPanel {
   width: 80%;
   height: 5vh;
+  min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +25,17 @@ input {
   color: white;
   font-family: "Sora";
 }
+@media (max-width: 900px) {
+  input {
+    font-size: 20px;
+    padding-left: 5px;
+  }
+}
+@media (max-width: 900px) {
+  input {
+    font-size: 14px;
+  }
+}
 
 button {
   width: 10%;
@@ -34,4 +46,14 @@ button {
   color: white;
   font-family: "Sora";
   cursor: pointer;
+}
+@media (max-width: 900px) {
+  button {
+    width: 20%;
+  }
+}
+@media (max-width: 600px) {
+  button {
+    font-size: 11px;
+  }
 }/*# sourceMappingURL=InputPanelStyles.css.map */

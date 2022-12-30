@@ -2,6 +2,10 @@ $InputPanelBackgroundColor: rgb(18, 18, 18);
 $ButtonBackGroundColor: rgb(10, 191, 80);
 $borderRadius: 10px;
 
+$MediumWidthResolution: 800px;
+$SmallWidthResolution: 600px;
+$SmallScreenWidthResolution: 1000px;
+
 @mixin HeightAndWidth($value) {
     height: $value;
     width: $value;
