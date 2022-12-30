@@ -3,4 +3,4 @@ function RegexChecker(url) {
     return (pattern.test(url)) ? true : false;
 }
 
-export default RegexChecker
+module.exports = RegexChecker
