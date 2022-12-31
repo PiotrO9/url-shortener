@@ -31,6 +31,7 @@ export default {
         setTimeout(() => 
         { 
           Input.setAttribute("placeholder", "Paste long url and shorten it"),
+          Input.style.color = "white",
           document.getElementById("InputPanel").classList.remove("wrong-url")
         }, 2200)
       }

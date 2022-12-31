@@ -25,13 +25,13 @@ input {
   color: white;
   font-family: "Sora";
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   input {
     font-size: 20px;
     padding-left: 5px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   input {
     font-size: 14px;
   }
@@ -47,7 +47,7 @@ button {
   font-family: "Sora";
   cursor: pointer;
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   button {
     width: 20%;
   }
