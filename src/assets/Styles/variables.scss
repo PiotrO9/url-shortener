@@ -2,9 +2,9 @@ $InputPanelBackgroundColor: rgb(18, 18, 18);
 $ButtonBackGroundColor: rgb(10, 191, 80);
 $borderRadius: 10px;
 
+$SmallScreenWidthResolution: 1000px;
 $MediumWidthResolution: 800px;
 $SmallWidthResolution: 600px;
-$SmallScreenWidthResolution: 1000px;
 
 @mixin HeightAndWidth($value) {
     height: $value;
@@ -15,6 +15,11 @@ $SmallScreenWidthResolution: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin FlexJustify($justfifyDirection) {
+    @include FlexCener;
+    justify-content: $justfifyDirection;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700&display=swap');

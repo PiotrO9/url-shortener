@@ -46,36 +46,4 @@ export default {
 
 <style lang="scss">
 @import '../assets/Styles/InputPanelStyles.scss';
-
-.wrong-url {
-  animation: wrongUrlAnimation 1s forwards;
-
-  input {
-
-    &::placeholder {
-    color: red;
-  }
-  }
-}
-
-@keyframes wrongUrlAnimation {
-  20% {
-    transform: translateX(3vw);
-  }
-  35% {
-    transform: translateX(-3vw);
-  }
-  45% {
-    transform: translateX(3vw);
-  }
-  60% {
-    transform: translateX(-3vw);
-  }
-  75% {
-    transform: translateX(3vw);
-  }
-  90% {
-    transform: translateX(0);
-  }
-}
 </style>
