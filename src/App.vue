@@ -20,7 +20,6 @@
 import MainText from './components/MainText.vue'
 import InputPanel from './components/InputPanel.vue'
 import NewUrl from './components/NewUrl.vue'
-import UrlShortenerApiKey from './utils/apikeys/ShortUrlApi.js'
 import FetchApi from './utils/FetchApi.js'
 
 export default {
