@@ -1,5 +1,3 @@
-import UrlShortenerApiKey from './apikeys/ShortUrlApi.js'
-
 async function FetchApi(LinkToShorten) {
     return await fetch('https://api-ssl.bitly.com/v4/shorten', {
         method: 'POST',
