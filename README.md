@@ -1,6 +1,6 @@
 # Url-shortener
 
-<img src="/preview.jpg">
+<img src="/preview.png">
 
 ## How to run project
 
@@ -10,7 +10,7 @@
 
 ## About project
 
-This project is made for shortening link to more accessible form. You can see demo here: 
+This project is made for shortening link to more accessible form. You can see demo here: <br>
 ###[Live Demo](https://piotrullo-url-shortener.netlify.app/)
 
 ## Techstack
